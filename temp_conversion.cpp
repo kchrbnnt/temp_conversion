@@ -2,6 +2,8 @@
 
 using namespace std;
 
+char unit;
+float temp;
 float celsius;
 float fahrenheit;
 float kelvin;
@@ -44,9 +46,28 @@ float f_to_k()
 
 int main()
 {
-    cout << "Enter a temperature in degrees Fahrenheit to convert to degrees Celsius.";
-    cin >> fahrenheit;
-    float f_to_c();
-    cout << celsius;
+    cout << "Enter a temperature with units: ";
+    cin >> temp;
+    cin >> unit;
+    
+    if(isupper(unit))
+	{
+		unit = tolower(unit);
+	}
+    
+    if(unit == 'f')
+    {    
+        cout << f_to_c "degrees C\n" && f_to_k "Kelvin";
+    }
+    
+    if(unit == 'c')
+    {
+        cout << c_to_f "degrees F\n" && c_to_k "Kelvin";
+    }
+    
+    if(unit == 'k')
+    {
+        cout << k_to_f "degrees F\n" && k_to_c "degrees C";
+    }
     return 0;
 }
